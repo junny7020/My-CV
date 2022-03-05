@@ -1,0 +1,208 @@
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.8cm,right=10cm,marginparwidth=7cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{000000}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{2E2E2E}
+\definecolor{NavyBlue}{rgb}{0.13, 0.09 0.46}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{\color{NavyBlue}MInjun Choi}
+\tagline{}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%\photo{3.3cm}{profile.jpg}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{junny7020@gmail.com}
+   \phone{+447988175650}
+%  \mailaddress{Address, Street, 00000 County}
+%  \homepage{marissamayr.tumblr.com/}
+%  \twitter{@marissamayer}
+%  \linkedin{linkedin.com/in/ronak-dedhiya}
+   \linkedin{https://www.linkedin.com/in/minjun-choi-9392a21b8/}
+   \github{github.com/junny7020}
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+\cvsection[page1sidebar]{Education}
+
+\cvevent{}{The University of Manchester}{September 2020 - June 2023}
+
+\begin {itemize}
+\item Degree: BSc Computer Science and Mathematics
+\end{itemize}
+
+\cvevent{}{MPW Cambridge}{September 2019 - June 2020}{Cambridge, United Kingdom}
+\begin{itemize}
+\item A-Levels:	Maths(A*), Further Maths(A*), Physics(A*)
+\item Award: The MPW Mathematics Prize
+\end{itemize}
+% \divider
+
+\cvsection{Experience}
+
+\cvevent{GreatUniHack 2021 Hackathon}{UniCS society(University of Manchester)}{November 2021}
+
+\begin{itemize}
+    \item Lead the group of 5 people and worked together in \\
+    remote environment
+    \item Developed a game using python
+\end{itemize}
+
+\divider
+
+\cvevent{Member of GameDev Unity Tutorial}{University of Manchester}{September 2020 - April 2021}
+
+\begin{itemize}
+
+\item Produced videos and projects of unity tutorials on how to \\
+develop a 3D game.
+\item Developed a 3D game from open source sprites and animations
+
+\end{itemize}
+
+\divider
+
+\cvevent{Participant in Crackchester \& BT Capture The Flag}{University of Manchester}{November 2020}
+
+\begin{itemize}
+
+\item Solved various quizzes and puzzles in order to get to the higher rank
+\item Accomplished 10th place in the Capture The Flag event
+
+\end{itemize}
+
+\divider
+
+\cvevent{Member of Intermediate and Advanced group}{Unisoft Coding Academy}{March 2016 -- September 2017}{Seoul, South Korea}
+
+\begin{itemize}
+
+\item Solved challenging problems on https://www.acmicpc.net/ with teaching staffs and group members
+\item Achieved 3rd place in Korea Olympiad in Informatics (KOI)
+
+\end{itemize}
+
+%\divider
+
+\cvsection{Positions of Responsibility}
+\cvevent{PASS Leader}{University of Manchester}{September 2021 - June 2022}{}
+
+\begin{itemize}
+
+\item Taken a role as a mentor to 1st year undergraduate students.
+Given them some guidance with their studies, school life, and finding opportunities for their career. 
+
+\end{itemize}
+
+\divider
+
+\cvevent{Member of Student Council}{MPW Cambridge}{September 2019 - June 2020}
+
+\begin{itemize}
+
+\item Arranged the anti-bullying week activity
+\item Run the College Christmas Fair
+\item Raised fund for Cancer Research and Children in Need
+
+\end{itemize}
+
+\divider
+
+
+% \divider
+%\cvskill{German}{3}
+
+% \cvevent{Product Engineer}{Google}{23 June 1999 -- 2001}{Palo Alto, CA}
+
+% \begin{itemize}
+% \item Joined the company as employe \#20 and female employee \#1
+% \item Developed targeted advertisement in order to use user's search queries and show them related ads
+% \end{itemize}
+
+%\cvsection{A Day of My Life}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+% Some ad-hoc tweaking to adjust the labels so that they don't overlap
+% \wheelchart{1.5cm}{0.5cm}{%
+%   10/10em/accent!30/Sleeping \& dreaming about work,
+%   25/9em/accent!60/Public resolving issues with Yahoo!\ investors,
+%   5/13em/accent!10/\footnotesize\\[1ex]New York \& San Francisco Ballet Jawbone board member,
+%   20/15em/accent!40/Spending time with family,
+%   5/8em/accent!20/\footnotesize Business development for Yahoo!\ after the Verizon acquisition,
+%   30/9em/accent/Showing Yahoo!\ employees that their work has meaning,
+%   5/8em/accent!20/Baking cupcakes
+% }
+
+\clearpage
+
+% \cvsection[page2sidebar]{Publications}
+
+\nocite{*}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, type=article]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+% %% If the NEXT page doesn't start with a \cvsection but you'd
+% %% still like to add a sidebar, then use this command on THIS
+% %% page to add it. The optional argument lets you pull up the
+% %% sidebar a bit so that it looks aligned with the top of the
+% %% main column.
+% % \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
